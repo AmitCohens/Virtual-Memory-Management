@@ -1,0 +1,65 @@
+Virtual Memory Management
+Authored by Amit Cohen |Ex6|7/06/21
+315147330
+
+==Description==
+
+The program  simulates access, read and write to memory, LRU management of the frames in the main memory.
+-----------------------------------------------------------------------------------------------------------------------------
+program DATABASE:
+1) text size-
+2) data size-
+3) bss size-
+4) heao stack size-
+5) clock
+6) swap size
+7) Arrays:
+	a) frameManagerLRU
+	b )freeFrame
+	c) freeInSwap
+
+-----------------------------------------------------------------------------------------------------------------------------
+functions:
+1) store-Loading information into memory
+2) load-Extracting an address from memory
+3) print_memory-This function prints the main memory
+4) print_swap-This function prints the swap file
+5) print_pagetable-This function prints the page table
+6) getCharFromMM-This function returns the required character from the main memory
+7) pageInMM-This function checks if the required page is already in the main memory
+8) loadThePageFromLM-This function loads into the buff the relevant page from the logical memory
+9) loadPageIntoMM-This function loads the page inside the buff into the main memory
+10) LRU_Management-This function implements the LRU principle, searches for the page that appears the longest and overrides it / swaps it
+11) findMin-This function checks the LRU for the lowest clock water (that is, it has been used for the longest time).
+12) setCharIntoMM-This function inserts the character into the required space in the main memory
+13) whatPageIsThis-This function returns :
+	0 if the page is a text page,
+ 	1 if the page is data.
+ 	2 if the BSS page.
+	3 if the page is stack / heap.
+14) findFree-This function runs on the Boolean array and checks where there is a false and returns its index.
+15) loadThePageFromSwap-This function loads the relevant page from the swap file into the main memory
+16) loadPageIntoSwap-This function loads a page that you want to clear from the main memory on the swap file
+17) allocationMemory-This function simulates memory allocation, actually creating a new page that is all zeros within the main memory
+18) destroy-This function shuts down all resources when there is an error reading, writing or opening a file
+19)This function checks if the address is in the legal domain.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+==Program Files==
+1) sim_mem.h-The signatures of the functions.
+2) sim_mem.cpp-The realization of the functions.
+3) main.cpp-
+
+
+==How to compile?==
+g++ main.cpp sim_mem.cpp sim_mem.h -o Ex6
+run: ./Ex6
+
+==Input==
+1) exe.txt -
+
+==Output==
+1) the swap file
+2) the page table
+3) the main memory

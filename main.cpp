@@ -1,0 +1,68 @@
+
+#include <iostream>
+#include "sim_mem.h"
+char main_memory[MEMORY_SIZE];
+int main() {
+    //char val,val2;
+    sim_mem mem_sm((char *) "/home/student/CLionProjects/ExSix/exe.txt", (char *) "swap_file", 5, 20, 25, 15, 13, 5);
+    //=mem_sm.load(3);
+    mem_sm.load(2);
+    mem_sm.load(3);
+    mem_sm.store(6, '6');
+    mem_sm.store(9, '9');
+    mem_sm.store(12, 'Z');
+    mem_sm.load(1);
+    mem_sm.store(15, '&');
+    mem_sm.store(13, 'Z');
+    mem_sm.store(14, 'Z');
+    mem_sm.load(2);
+    mem_sm.load(3);
+    mem_sm.load(7);
+    mem_sm.store(44, '~');
+    mem_sm.store(43, '~');
+    mem_sm.store(42, '~');
+    mem_sm.store(41, '~');
+    mem_sm.store(40, '~');
+    mem_sm.store(39, '#');
+    mem_sm.store(38, '#');
+    mem_sm.store(37, '#');
+    mem_sm.store(36, '#');
+    mem_sm.store(35, '#');
+    mem_sm.store(49, '@');
+    mem_sm.store(48, '@');
+    mem_sm.store(47, '@');
+    mem_sm.store(46, '@');
+    mem_sm.store(45, '@');
+    mem_sm.store(29, '^');
+    mem_sm.store(28, '^');
+    mem_sm.store(27, '^');
+    mem_sm.store(26, '^');
+    mem_sm.store(25, '^');
+    mem_sm.load(20);
+    mem_sm.load(5);
+    mem_sm.load(15);
+    mem_sm.load(10);
+    mem_sm.load(0);
+    mem_sm.store(59, '!');
+    mem_sm.store(58, '!');
+    mem_sm.store(57, '!');
+    mem_sm.store(56, '!');
+    mem_sm.store(55, '!');
+    mem_sm.print_swap();
+    mem_sm.store(64, '%');
+    mem_sm.store(63, '%');
+    mem_sm.store(62, '%');
+    mem_sm.store(61, '%');
+    mem_sm.store(60, '%');
+    mem_sm.print_swap();
+    mem_sm.store(54, '.');
+    mem_sm.store(53, '.');
+    mem_sm.store(52, '.');
+    mem_sm.store(51, '.');
+    mem_sm.store(50, '.');
+    mem_sm.print_swap();
+    mem_sm.load(40);
+    mem_sm.print_swap();
+    mem_sm.print_memory();
+    mem_sm.print_page_table();
+}
